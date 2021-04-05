@@ -3,7 +3,7 @@
 
 <div class='container'>
 <h1>Student Details</h1>
-<form action="{{route('update',$student->id)}}" method="POST">
+<form action="{{ route('update',$student->id) }}" method="POST">
 
 {{ csrf_field() }}
 
@@ -13,13 +13,13 @@
 <div class="row mb-4">
 <div class="col">
 <div class="form-outline">
-<input type="text" id="form3Example1" class="form-control" value={{$student->first_name}} />
+<input type="text" id="form3Example1" class="form-control"  name="first_name"  value={{$student->first_name}} />
 <label class="form-label" for="form3Example1">First name</label>
 </div>
 </div>
 <div class="col">
 <div class="form-outline">
-<input type="text" id="form3Example2" class="form-control" value={{$student->last_name}} />
+<input type="text" id="form3Example2" class="form-control" name="last_name" value={{$student->last_name}} />
 <label class="form-label" for="form3Example2">Last name</label>
 </div>
 </div>
@@ -27,7 +27,7 @@
 
 <!-- Email input -->
 <div class="form-outline mb-4">
-<input type="email" id="form3Example3" class="form-control"  value={{$student->email}}/>
+<input type="email" id="form3Example3" class="form-control"  name="email" value={{$student->email}}/>
 <label class="form-label" for="form3Example3">Email address</label>
 </div>
 
@@ -35,7 +35,7 @@
 
 <!-- Checkbox -->
 <div class="form-outline mb-4">
-<input type="number" id="form3Example3" class="form-control"  value={{$student->phone}} />
+<input type="number" id="form3Example3" class="form-control"  name="phone" value={{$student->phone}} />
 <label class="form-label" for="form3Example3">Phone number</label>
 </div>
 
